@@ -1,4 +1,5 @@
 import { Outlet, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import React from "react";
 
 import { Footer, Navbar } from "./components";
 import {
