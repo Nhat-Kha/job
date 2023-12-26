@@ -1,6 +1,6 @@
 import Users from "../models/userModel.js";
 
-export const register = async (req, res, next) => {
+const register = async (req, res, next) => {
   const { firstName, lastName, email, password } = req.body;
 
   //validate fileds
@@ -54,7 +54,7 @@ export const register = async (req, res, next) => {
   }
 };
 
-export const signIn = async (req, res, next) => {
+const signIn = async (req, res, next) => {
   const { email, password } = req.body;
 
   try {
@@ -94,4 +94,9 @@ export const signIn = async (req, res, next) => {
     console.log(error);
     res.status(404).json({ message: error.message });
   }
+};
+
+module.exports = {
+  signIn,
+  signIn,
 };
